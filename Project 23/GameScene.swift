@@ -9,7 +9,18 @@
 import SpriteKit
 
 class GameScene: SKScene {
+
+    var starField: SKEmitterNode!
+    var player: SKSpriteNode!
+    var scoreLabel: SKLabelNode!
+    var score:Int = 0 {
+      didSet {
+        scoreLabel.text = "Score: \(score)"
+      }
+    }
+  
     override func didMoveToView(view: SKView) {
+    
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
